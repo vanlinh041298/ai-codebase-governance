@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   notify-slack:
-    if: github.event.pull_request.draft == false
+    if: ${{ github.event.pull_request.draft == false && secrets.SLACK_WEBHOOK_URL != '' }}
     runs-on: ubuntu-latest
     steps:
       - uses: slackapi/slack-github-action@v2.0.0
