@@ -59,6 +59,27 @@ Agents must work on feature branches or worktrees, validate their changes, and r
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Security reports should follow [SECURITY.md](SECURITY.md).
 
+## Branching and review
+
+- `main` is the stable, release-ready branch.
+- `develop` is the integration branch for reviewed changes.
+- Create feature, fix, and documentation branches from `develop`.
+- Open pull requests into `develop` and complete all required reviews and status checks.
+- Promote `develop` to `main` through a reviewed pull request only.
+- Direct pushes, force pushes, and deletions of `main` or `develop` are disabled by repository rules.
+
+For a documentation or governance update:
+
+```powershell
+git switch develop
+git pull
+git switch -c docs/<short-description>
+# Make and validate the changes.
+git push -u origin docs/<short-description>
+```
+
+Then open a pull request targeting `develop`. Do not bypass required checks or merge before CODEOWNERS review.
+
 ## License
 
 MIT. Adapt the templates for personal, internal, or commercial use; retain the license notice.
