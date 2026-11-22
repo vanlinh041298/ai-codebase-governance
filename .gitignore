@@ -1,0 +1,20 @@
+# Local harness output
+harness-report.html
+
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+coverage/
+
+# Local environment and editor state
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Local source junctions/shortcuts
+src/*
+!src/README.md

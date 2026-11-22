@@ -1,0 +1,9 @@
+# Default core-maintainer approval.
+* @core-lead-1 @core-lead-2
+
+# Specialist approval for critical paths.
+/src/auth/ @security-lead
+/src/billing/ @backend-lead
+/prisma/migrations/ @db-admin
+/.github/workflows/ @devops-lead
+AGENTS.md @core-lead-1
